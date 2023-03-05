@@ -16,9 +16,9 @@ export const Navigation = () => {
     /**👋 */
     <>
     <div className='mobileMenu'>
-      <a href="">Projects</a>
-      <a href="">About Me</a>
-      <a href="">Contact</a>
+      <a onClick={()=> {document.querySelector(".works").scrollIntoView({behavior: "smooth"})}}>Projects</a>
+      <a onClick={()=> {document.querySelector(".about").scrollIntoView({behavior: "smooth"})}}>About Me</a>
+      <a onClick={()=> {document.querySelector("#footer").scrollIntoView({behavior: "smooth"})}}>Contact</a>
     </div>
 
       <nav>
