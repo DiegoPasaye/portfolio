@@ -12,13 +12,14 @@ export const Navigation = () => {
     document.querySelector(".burgerIcon").classList.toggle("closeMenu")
     document.querySelector(".mobileMenu").classList.toggle("mostrar")
   }
+  
   return (
     /**👋 */
     <>
     <div className='mobileMenu'>
-      <a onClick={()=> {document.querySelector(".works").scrollIntoView({behavior: "smooth"})}}>Projects</a>
-      <a onClick={()=> {document.querySelector(".about").scrollIntoView({behavior: "smooth"})}}>About Me</a>
-      <a onClick={()=> {document.querySelector("#footer").scrollIntoView({behavior: "smooth"})}}>Contact</a>
+      <a onClick={()=> {document.querySelector(".works").scrollIntoView({behavior: "smooth"}); document.querySelector(".mobileMenu").classList.toggle("mostrar");document.querySelector(".burgerIcon").classList.toggle("closeMenu")}}>Projects</a>
+      <a onClick={()=> {document.querySelector(".works").scrollIntoView({behavior: "smooth"}); document.querySelector(".mobileMenu").classList.toggle("mostrar");document.querySelector(".burgerIcon").classList.toggle("closeMenu")}}>About Me</a>
+      <a onClick={()=> {document.querySelector(".works").scrollIntoView({behavior: "smooth"}); document.querySelector(".mobileMenu").classList.toggle("mostrar");document.querySelector(".burgerIcon").classList.toggle("closeMenu")}}>Contact</a>
     </div>
 
       <nav>
