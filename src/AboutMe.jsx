@@ -8,7 +8,7 @@ export const AboutMe = () => {
 
         <div>
             <h2>About me</h2>
-            <p>Description</p>
+            <p>Hi, i´m Diego, a IT Enginer Student and Software Developer living in Morelia, Michoacan, i have 18 years old and i live coding.</p>
         </div>
     </div>
   )

@@ -31,7 +31,6 @@ nav a{
     font-size: 3vh;
 }
 
-
 .mobileMenu{
     display: none;
 }
@@ -85,17 +84,47 @@ nav a{
     color: white;
 }
 .texto-autoescrito {
-    width: min-content;
+    display: inline-block;
+    max-width: min-content;
     overflow: hidden;
-    color: white;
+    color: rgb(255, 255, 255,0.7);
     border-right: 0.15em solid white; /* línea intermitente que simula la escritura */
     white-space: nowrap; /* hace que el texto no se envuelva a la siguiente línea */
     letter-spacing: 0.15em; /* establece un espacio entre las letras */
     font-size: 5vh;
     animation:
-      escribir 3s steps(20, end),
-      blink-caret 0.75s step-end infinite,
-      borrado 2s steps(20, end) 4s forwards;
+    escribir 10s steps(40, end),
+    borrado 4s steps(40, end) 10s forwards;
+}
+input::placeholder{
+    padding-left: 5%;
+}
+@keyframes escribir {
+    from { width: 0; }
+    to { width: 100%; }
+  }
+  
+  @keyframes borrado {
+    from { width: 100%; }
+    to { width: 0; }
+  }
+.navMobile{
+    display: none;
+}
+.burger{
+    display: none;
+}
+a{
+    cursor: pointer;
+}
+.ocultar{
+    display: none;
+}
+.about h2{
+    font-size: 30px;
+}
+.about p{
+    font-size: 20px;
 }
 
 
@@ -181,7 +210,7 @@ a:hover{
     display: flex;
     flex-direction: column;
     width: 80%;
-    margin-left: 9%;
+    margin-left: 10%;
     gap: 50px;
     text-align: center;
 }
@@ -264,36 +293,56 @@ form button:hover{
     color: black;
     border: 1px solid white;
 }
-  
-  @keyframes escribir {
-    from { width: 0; }
-    to { width: 33%; }
-  }
-  @keyframes borrado{
-    from {width: 33%;}
-    to{
-        width: 0%;
-    }
-  }
-  
+
   @keyframes blink-caret {
     from, to { border-color: transparent; }
     50% { border-color: orange; }
   }
 @media (max-width:850px){
+    @keyframes escribir {
+        from { width: 0; }
+        to { width: 80%; }
+      }
+      @keyframes borrado{
+        from {width: 80%;}
+        to{
+            width: 0%;
+        }
+      }
+    .texto-autoescrito {
+        width: max-content;
+        animation:
+          escribir 2s steps(40, end),
+          blink-caret 0.75s step-end infinite,
+          borrado 2s steps(40, end) 4s forwards;
+    }
     .top{
         display: flex;
         flex-direction: column;
     }
-    nav span{
-        font-size: 35px;
+    nav{
+        display: none;
+    }
+    .navMobile{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 90%;
+        padding: 3% 5% 0 5%;
+    }
+    .navMobile img{
+        width: 10%;
+    }
+    .texto-autoescrito2{
+        font-size: 24px;
+    }
+    .navMobile span{
+        font-size: 20px;
+        color: rgb(255, 255, 255,0.7);
     }
     .top{
         height: 100%;
         width: 100%;
-    }
-    nav a{
-        font-size: 25px;
     }
     .about img{
         width: 50%;

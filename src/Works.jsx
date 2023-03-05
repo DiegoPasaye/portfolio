@@ -14,8 +14,8 @@ export const Works = () => {
                     <h3>Fylo with dark theme</h3>
                     <p>A simple page to display information of a project.</p>
                     <div>
-                        <button>View Page!</button>
-                        <button>View Code!</button>
+                        <button onClick={()=>{window.open("https://diegopasaye.github.io/fylo-dark-theme/", "_blank")}}>View Page!</button>
+                        <button onClick={()=>{window.open("https://github.com/DiegoPasaye/fylo-dark-theme", "_blank")}}>View Code!</button>
                     </div>
                 </div>
         </div>
@@ -26,8 +26,8 @@ export const Works = () => {
                     <h3>Social Media Dashboard</h3>
                     <p>A page for display the stats of a social account.</p>
                     <div>
-                        <button>View Page!</button>
-                        <button>View Code!</button>
+                        <button onClick={()=>{window.open("https://diegopasaye.github.io/social-media-dashboard/", "_blank")}}>View Page!</button>
+                        <button onClick={()=>{window.open("https://github.com/DiegoPasaye/social-media-dashboard", "_blank")}}>View Code!</button>
                     </div>
                 </div>
         </div>
@@ -39,8 +39,8 @@ export const Works = () => {
                     <h3>Time tracking main</h3>
                     <p>The time what you do use in anythings.</p>
                     <div>
-                        <button>View Page!</button>
-                        <button>View Code!</button>
+                        <button onClick={()=>{window.open("https://diegopasaye.github.io/time-tracking-main/", "_blank")}}>View Page!</button>
+                        <button onClick={()=>{window.open("https://github.com/DiegoPasaye/time-tracking-main", "_blank")}}>View Code!</button>
                     </div>
                 </div>
         </div>
