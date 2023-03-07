@@ -10,27 +10,18 @@ import { Toolkit } from './Toolkit'
 import { Works } from './Works'
 
 export const Navigation = () => {
-  const elementoAnimado = useRef(null);
-  useEffect(() => {
-  ScrollReveal().reveal(elementoAnimado.current, {
-    duration: 2000,
-    distance: '200px',
-    easing: 'ease-out',
-    origin: 'bottom'
-  });
-}, []);
   const burger = () => {
     document.querySelector(".burgerIcon").classList.toggle("closeMenu")
-    document.querySelector(".mobileMenu").classList.toggle("mostrar")
+    document.querySelector(".mobileMenu").classList.toggle("mostrarMobile")
   }
   
   return (
     /**👋 */
-    <>
-    <div className='mobileMenu' ref={elementoAnimado}>
-      <a onClick={()=> {document.querySelector(".works").scrollIntoView({behavior: "smooth"}); document.querySelector(".mobileMenu").classList.toggle("mostrar");document.querySelector(".burgerIcon").classList.toggle("closeMenu")}}>Projects</a>
-      <a onClick={()=> {document.querySelector(".works").scrollIntoView({behavior: "smooth"}); document.querySelector(".mobileMenu").classList.toggle("mostrar");document.querySelector(".burgerIcon").classList.toggle("closeMenu")}}>About Me</a>
-      <a onClick={()=> {document.querySelector(".works").scrollIntoView({behavior: "smooth"}); document.querySelector(".mobileMenu").classList.toggle("mostrar");document.querySelector(".burgerIcon").classList.toggle("closeMenu")}}>Contact</a>
+    <div>
+    <div className='mobileMenu'>
+      <a onClick={()=> {document.querySelector(".works").scrollIntoView({behavior: "smooth"})}}>Projects</a>
+      <a onClick={()=> {document.querySelector(".about").scrollIntoView({behavior: "smooth"})}}>About Me</a>
+      <a onClick={()=> {document.querySelector("#footer").scrollIntoView({behavior: "smooth"})}}>Contact</a>
     </div>
 
       <nav>
@@ -45,6 +36,6 @@ export const Navigation = () => {
         <span>Diego Pasaye</span>
         <img className='burgerIcon' src={burger2} alt="burger icon" onClick={burger}/>
       </div>
-    </>
+    </div>
   )
 }

@@ -58,7 +58,7 @@ nav a{
     cursor: pointer;
     font-size: 2vh;
 }
-.mostrar{
+.mostrarMobile{
     display: flex;
     flex-direction: column;
     position: absolute;
@@ -66,12 +66,12 @@ nav a{
     height: 100vh;
     background: black;
     color: white;
-    z-index: 0;
     padding: 20% 0 0 0;
     font-size: 30px;
     align-items: center;
     gap: 60px;
     justify-content: flex-start;
+    z-index: 8;
 }
 .mostrar a{
     text-decoration: none;
@@ -110,6 +110,10 @@ input::placeholder{
   }
 .navMobile{
     display: none;
+}
+.closeMenu{
+    content: url('./images/close.svg');
+    z-index: 20;
 }
 .burger{
     display: none;
@@ -245,6 +249,9 @@ footer{
     color: rgb(255, 255, 255,0.7);
     padding: 5% 10% 5% 10%;
     justify-content: space-between;
+}
+.mostrarX{
+    display: none;
 }
 .connect{
     display: flex;
@@ -474,10 +481,6 @@ form button:hover{
         padding: 0;
         width: 95%;
         margin-top: 2.5%;
-    }
-    .closeMenu{
-        content: url('./images/close.svg');
-        z-index: 10;
     }
 }
   
