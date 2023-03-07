@@ -1,4 +1,6 @@
-import React from 'react'
+import React, { useEffect } from 'react';
+import ScrollReveal from 'scrollreveal';
+import { useRef } from 'react'
 import './styles.css'
 import burger2 from './images/burger2.svg'
 import { AboutMe } from './AboutMe'
@@ -8,6 +10,15 @@ import { Toolkit } from './Toolkit'
 import { Works } from './Works'
 
 export const Navigation = () => {
+  const elementoAnimado = useRef(null);
+  useEffect(() => {
+  ScrollReveal().reveal(elementoAnimado.current, {
+    duration: 2000,
+    distance: '200px',
+    easing: 'ease-out',
+    origin: 'bottom'
+  });
+}, []);
   const burger = () => {
     document.querySelector(".burgerIcon").classList.toggle("closeMenu")
     document.querySelector(".mobileMenu").classList.toggle("mostrar")
@@ -16,7 +27,7 @@ export const Navigation = () => {
   return (
     /**👋 */
     <>
-    <div className='mobileMenu'>
+    <div className='mobileMenu' ref={elementoAnimado}>
       <a onClick={()=> {document.querySelector(".works").scrollIntoView({behavior: "smooth"}); document.querySelector(".mobileMenu").classList.toggle("mostrar");document.querySelector(".burgerIcon").classList.toggle("closeMenu")}}>Projects</a>
       <a onClick={()=> {document.querySelector(".works").scrollIntoView({behavior: "smooth"}); document.querySelector(".mobileMenu").classList.toggle("mostrar");document.querySelector(".burgerIcon").classList.toggle("closeMenu")}}>About Me</a>
       <a onClick={()=> {document.querySelector(".works").scrollIntoView({behavior: "smooth"}); document.querySelector(".mobileMenu").classList.toggle("mostrar");document.querySelector(".burgerIcon").classList.toggle("closeMenu")}}>Contact</a>

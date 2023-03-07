@@ -1,9 +1,20 @@
-import React from 'react'
+import React, { useEffect } from 'react';
+import ScrollReveal from 'scrollreveal';
+import { useRef } from 'react'
 import { Footer } from './Footer';
 
 export const Header = () => {
+  const elementoAnimado = useRef(null);
+  useEffect(() => {
+  ScrollReveal().reveal(elementoAnimado.current, {
+    duration: 2000,
+    distance: '200px',
+    easing: 'ease-out',
+    origin: 'bottom'
+  });
+}, []);
   return (
-    <div className='header'>
+    <div className='header' ref={elementoAnimado}>
         <h1>Hello! 👋 I´m Diego.</h1>
         <p className='texto-autoescrito'>Software enginer</p>
         <p className='header-description'>I build beautiful and interactive pages, writing clean and efficient code.</p>

@@ -1,11 +1,24 @@
-import React from 'react'
+import React, { useEffect } from 'react';
 import fylo from './images/fylo-dark-theme.webp'
 import social from './images/social-media-dashboard.webp'
 import time from './images/tyme-tracking.webp'
+import ScrollReveal from 'scrollreveal';
+import { useRef } from 'react'
 
 export const Works = () => {
+
+    const elementoAnimado = useRef(null);
+    useEffect(() => {
+    ScrollReveal().reveal(elementoAnimado.current, {
+      duration: 2000,
+      distance: '200px',
+      easing: 'ease-out',
+      origin: 'bottom'
+    });
+  }, []);
+
   return (
-    <div className='works'>
+    <div className='works' ref={elementoAnimado}>
         <h2>My works</h2>
 
         <div className='work'>

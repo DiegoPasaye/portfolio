@@ -1,9 +1,20 @@
-import React from 'react'
+import React, { useEffect } from 'react';
+import ScrollReveal from 'scrollreveal';
+import { useRef } from 'react'
 import person from './images/profile.svg'
 
 export const AboutMe = () => {
+  const elementoAnimado = useRef(null);
+  useEffect(() => {
+  ScrollReveal().reveal(elementoAnimado.current, {
+    duration: 2000,
+    distance: '200px',
+    easing: 'ease-out',
+    origin: 'bottom'
+  });
+}, []);
   return (
-    <div className='about'>
+    <div className='about' ref={elementoAnimado}>
         <img src={person} alt="me icon" />
 
         <div>
