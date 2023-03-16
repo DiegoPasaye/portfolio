@@ -4,6 +4,7 @@ import social from './images/social-media-dashboard.webp'
 import time from './images/tyme-tracking.webp'
 import ScrollReveal from 'scrollreveal';
 import { useRef } from 'react'
+import github from './images/github.svg'
 
 export const Works = () => {
 
@@ -57,6 +58,8 @@ export const Works = () => {
                     </div>
                 </div>
         </div>
+
+        <button className='view-mores' onClick={()=>{window.open("https://github.com/DiegoPasaye?tab=repositories", "_blank")}}>View More Works</button>
 
 
     </div>

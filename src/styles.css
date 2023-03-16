@@ -168,7 +168,7 @@ a:hover{
     color: rgb(255, 255, 255,0.7);
     cursor: pointer;
 }
-.text-work div button:hover{
+.text-work div button:hover, .view-mores:hover{
     background: transparent;
     border: 1px solid black;
     color: black;
@@ -190,7 +190,23 @@ a:hover{
     text-align: center;
     padding: 5% 0;
 }
-
+.view-mores{
+    width: 30%;
+    margin-left: 35%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    padding: 20px 0;
+    border-radius: 50px;
+    border: 1px solid hsl(228 39% 23%);
+    background: hsl(228 39% 23%);
+    color: rgb(255, 255, 255,0.7);
+    cursor: pointer;
+}
+.view-more img{
+    width: 30px;
+}
 
 
 .about{
@@ -404,6 +420,10 @@ form button:hover{
         margin-left: 0;
         align-items: center;
     }
+    .about p{
+        width: 100%;
+        text-align: center;
+    }
 
     .toolkit{
         width: 90%;
@@ -456,6 +476,12 @@ form button:hover{
     }
     .header h1{
         font-size: 40px;
+    }
+    .view-mores{
+        width: 50%;
+        position: relative;
+        top: -5vh;
+        margin-left: 25%;
     }
     .about{
         margin-left: 5%;
