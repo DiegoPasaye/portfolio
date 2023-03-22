@@ -92,16 +92,17 @@ nav a{
     white-space: nowrap; /* hace que el texto no se envuelva a la siguiente línea */
     letter-spacing: 0.15em; /* establece un espacio entre las letras */
     font-size: 5vh;
-    animation:
-    escribir 10s steps(40, end),
-    borrado 4s steps(40, end) 10s forwards;
+    animation: escribir 10s steps(80, end) 2s infinite;
 }
 input::placeholder{
     padding-left: 5%;
 }
 @keyframes escribir {
-    from { width: 0; }
-    to { width: 100%; }
+    0%{width: 0%;}
+    50%{width: 100%;}
+    75%{width: 100%;}
+    99%{width: 0%;}
+    100%{width: 0%;}
   }
   
   @keyframes borrado {

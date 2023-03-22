@@ -13,9 +13,10 @@ export const Header = () => {
     origin: 'bottom'
   });
 }, []);
+
   return (
     <div className='header' ref={elementoAnimado}>
-        <h1>Hello! 👋 I´m Diego.</h1>
+        <h1>Hello! <span>👋</span> I´m Diego.</h1>
         <p className='texto-autoescrito'>Software enginer</p>
         <p className='header-description'>I build beautiful and interactive pages, writing clean and efficient code.</p>
         <button onClick={() => {
