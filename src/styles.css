@@ -323,26 +323,12 @@ form button:hover{
     50% { border-color: orange; }
   }
 @media (max-width:850px){
-    @keyframes escribir {
-        from { width: 0; }
-        to { width: 80%; }
-      }
-      @keyframes borrado{
-        from {width: 80%;}
-        to{
-            width: 0%;
-        }
-      }
-    .texto-autoescrito {
-        width: max-content;
-        animation:
-          escribir 2s steps(40, end),
-          blink-caret 0.75s step-end infinite,
-          borrado 2s steps(40, end) 4s forwards;
-    }
     .top{
         display: flex;
         flex-direction: column;
+    }
+    .texto-autoescrito {
+        animation: escribir 10s steps(60, end) 2s infinite;
     }
     nav{
         display: none;
@@ -428,7 +414,7 @@ form button:hover{
 
     .toolkit{
         width: 90%;
-        margin-left: 0;
+        margin-left: 5%;
         padding: 10% 0;
     }
     .toolkit-divs{
@@ -460,7 +446,11 @@ form button:hover{
         padding: 15px 0;
     }
 }
-
+@media(max-width:600px){
+    .texto-autoescrito{
+        font-size: 4.5vh;
+    }
+}
 @media (max-width: 500px){
     nav{
         width: 100%;
@@ -510,5 +500,15 @@ form button:hover{
         margin-top: 2.5%;
     }
 }
-  
+  @media(max-width:400px){
+    .texto-autoescrito{
+        font-size: 2.7vh;
+    }
+    .header{
+        gap: 30px;
+    }
+    .header-description{
+        font-size: 2.4vh;
+    }
+  }
   

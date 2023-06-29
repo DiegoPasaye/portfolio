@@ -17,7 +17,7 @@ export const Header = () => {
   return (
     <div className='header' ref={elementoAnimado}>
         <h1>Hello! <span>👋</span> I´m Diego.</h1>
-        <p className='texto-autoescrito'>Software enginer</p>
+        <p className='texto-autoescrito'>Software engineer</p>
         <p className='header-description'>I build beautiful and interactive pages, writing clean and efficient code.</p>
         <button onClick={() => {
           document.querySelector("#footer").scrollIntoView({behavior: "smooth"});
